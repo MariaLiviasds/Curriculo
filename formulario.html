@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Formulário de Contato</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+
+<div class="container mt-5">
+    <h2 class="text-center">Formulário de Contato</h2>
+    <form id="contactForm">
+        <fieldset class="border p-4">
+            <legend class="w-auto">Dados Pessoais</legend>
+            <div class="form-group">
+                <label for="firstName">Nome:</label>
+                <input type="text" class="form-control" id="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Sobrenome:</label>
+                <input type="text" class="form-control" id="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefone:</label>
+                <input type="tel" class="form-control" id="phone" placeholder="(XX) XXXXX-XXXX" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem:</label>
+                <textarea class="form-control" id="message" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="language">Língua aplicada no serviço:</label>
+                <select class="form-control" id="language" required>
+                    <option>Inglês</option>
+                    <option>Español</option>
+                    <option>Français</option>
+                    <option>Português (pt-br)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fileUpload">Upload de arquivo:</label>
+                <input type="file" class="form-control-file" id="fileUpload" accept=".pdf,.doc,.docx,.jpeg,.png" required>
+            </div>
+            <div class="form-group">
+                <label>Languages Preferred:</label><br>
+                <select multiple class="form-control" id="preferredLanguages">
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>JavaScript</option>
+                    <option>Python</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Tipo de Banco de Dados:</label><br>
+                <div>
+                    <input type="radio" id="sql" name="databaseType" value="SQL" required>
+                    <label for="sql">SQL</label>
+                </div>
+                <div>
+                    <input type="radio" id="nosql" name="databaseType" value="NoSQL">
+                    <label for="nosql">NoSQL</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="meetingShift">Turno de preferência para reuniões:</label>
+                <select class="form-control" id="meetingShift" required>
+                    <option>Manhã</option>
+                    <option>Tarde</option>
+                    <option>Noite</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="suggestedTime">Melhor horário sugerido para reuniões:</label>
+                <input type="time" class="form-control" id="suggestedTime" required>
+            </div>
+            <div class="form-group">
+                <label for="deliveryDate">Previsão de entrega desejada:</label>
+                <input type="date" class="form-control" id="deliveryDate" required>
+            </div>
+            <button type="reset" class="btn btn-secondary">Limpar</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </fieldset>
+    </form>
+</div>
+
+<script>
+document.getElementById("contactForm").onsubmit = function(event) {
+    event.preventDefault();
+    // Adicione aqui a lógica de validação e submissão
+    alert("Formulário enviado!");
+};
+</script>
+
+</body>
+</html>
